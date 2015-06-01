@@ -1,3 +1,5 @@
 *.gem
 Gemfile.lock
 .bundle
+.overcommit.yml
+.ruby-version

@@ -10,23 +10,23 @@ class TestInteger < MiniTest::Unit::TestCase
   end
 
   def test_that_it_converts_zip_code_to_latlon
-    assert_equal "40.71209, -73.95427", 11211.to_latlon
+    assert_equal "40.71209, -73.95427", 11211.to_s.to_latlon
   end
 
   def test_that_it_converts_zip_code_to_lat
-    assert_equal "40.71209", 11211.to_lat
+    assert_equal "40.71209", 11211.to_s.to_lat
   end
 
   def test_that_it_converts_zip_code_to_lon
-    assert_equal "-73.95427", 11211.to_lon
+    assert_equal "-73.95427", 11211.to_s.to_lon
   end
 
   def test_that_it_converts_zip_code_int_to_gmt_offset
-    assert_equal "-5", 11211.to_gmt_offset
+    assert_equal "-5", 11211.to_s.to_gmt_offset
   end
 
   def test_that_it_converts_zip_code_int_daylight_savings_time_observance
-    assert_equal "1", 11211.to_dst
+    assert_equal "1", 11211.to_s.to_dst
   end
 
   def test_that_it_returns_boolean_for_daylight_savings_time_observance
@@ -87,7 +87,7 @@ class TestString < MiniTest::Unit::TestCase
   end
 
   def test_that_it_converts_daylight_savings_time_observance
-    assert_equal "1", "11211".to_dst
+    assert_equal "1", "11211".to_s.to_dst
   end
 
   def test_that_it_returns_true_for_daylight_savings_time_observance
